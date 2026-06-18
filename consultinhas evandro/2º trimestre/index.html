@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Consultas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Agendamento de Consultas</h1>
+        
+        <form id="form-consulta">
+            <div class="form-group">
+                <label for="paciente">Nome do Paciente:</label>
+                <input type="text" id="paciente" required placeholder="Ex: João Silva">
+            </div>
+            
+            <div class="form-group">
+                <label for="medico">Nome do Médico:</label>
+                <input type="text" id="medico" required placeholder="Ex: Dra. Ana Costa">
+            </div>
+            
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="horario">Horário:</label>
+                    <input type="time" id="horario" required>
+                </div>
+            </div>
+            
+            <button type="submit">Agendar Consulta</button>
+        </form>
+
+        <hr>
+
+        <h2>Consultas Agendadas</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paciente</th>
+                        <th>Médico</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-consultas">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
